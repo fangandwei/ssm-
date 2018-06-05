@@ -12,7 +12,7 @@
   <!-- 实现作业的提交 -->
    <action name="tijiao" class="studentAction" method="tijiao">
   
-     <result name="success">/pages/zuoyesuccess.jsp</result>
+     <result name="success" type="redirect">/pages/zuoyesuccess.jsp</result>
      
   </action>
   

@@ -23,9 +23,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is my JSP page. <br>
-    
           发布成功！！！
-    <a href="${pageContext.request.contextPath }/pages/teacher.jsp">回到主页</a>
+          <%
+           response.sendRedirect("/HWmanage/pages/teacher.jsp");
+           %>
   </body>
 </html>

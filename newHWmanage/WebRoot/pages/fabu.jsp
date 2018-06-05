@@ -18,7 +18,7 @@
        <textarea name="textarea2" cols="100" rows="20">
          <s:property value="#session.findbyname[0].text"/>
        </textarea>
-        <input type="submit" value="提交作业">
+        <input type="submit" value="发布作业">
        </form>    
 </body>
 </html>

@@ -13,6 +13,6 @@
       <br>
       <br>
       <br>
-      <a href="${pageContext.request.contextPath}/pages/fabu.jsp" target="Teacherright.jsp">发布作业</a>
+      <a href="${pageContext.request.contextPath}/pages/fabu.jsp" target="teacherright.jsp">发布作业</a>
 </body>
 </html>

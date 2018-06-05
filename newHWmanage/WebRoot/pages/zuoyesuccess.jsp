@@ -4,13 +4,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>left</title>
-  <script type="text/javascript" src="../js/dtree.js"></script>
-
+<title>Insert title here</title>
 </head>
 <body>
-          <a href="${pageContext.request.contextPath }/findhmbyname.action" target="right.jsp">查询自己的作业信息</a><br>
-
-
+    提交作业成功
+    <a target="_parent" href="${pageContext.request.contextPath }/pages/success.jsp">回到你的主页</a>
 </body>
 </html>
