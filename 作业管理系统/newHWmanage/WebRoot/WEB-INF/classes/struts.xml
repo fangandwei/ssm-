@@ -7,6 +7,7 @@
   <action name="stuzhuce" class="studentAction" method="addStu">
   
      <result name="success">/pages/zhucesuccess.jsp</result>
+     <result name="error">/pages/zhuce.jsp</result>
      
   </action>
   <!-- 实现作业的提交 -->
@@ -54,6 +55,7 @@
    </action>
    <action name="Tzhuce" class="teacherAction" method="zhuce">
       <result name="success" >/pages/zhucesuccess.jsp</result>
+      <result name="error">/pages/teacherzhuce.jsp</result>
    </action>
    <!-- 老师修改作业 -->
       <action name="fabuzuoye" class="teacherAction" method="fabuzuoye">

@@ -1,6 +1,7 @@
 package action;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -74,13 +75,25 @@ public class TeacherAction extends ActionSupport implements ModelDriven<Tea>{
 	        public String zhuce(){
 	        	//维护学生与老师的关系
 	        	HttpServletRequest request = ServletActionContext.getRequest();
-	        	String stuname = request.getParameter("select");
-	        	Stu stu=new Stu();
-	        	stu.setName(stuname);
+	        	
+	            //注册的时候需要判断数据库中是否有相同name的
+	       		   //把
+	       		   String stuname = request.getParameter("name");
+	       		   List<Tea> teaa  = this.teacherService.findall();
+	                   Iterator<Tea> iterator = teaa.iterator();
+	                   while(iterator.hasNext()){
+	                   	if((iterator.next().getName().equals(stuname))){
+	                   	   ValueStack stack = ServletActionContext.getContext().getValueStack();
+		        			stack.set("error", "已经有人叫这个名字了");
+		        			return ERROR;
+	                   		
+	                   		
+	                   	}
+	                   }
+	                   this.teacherService.addtea(tea);;
+              			
+              			return SUCCESS;
 	           	
-	        	System.out.println("------------------");
-        		this.teacherService.addtea(tea);
-        		return SUCCESS;
 	        }
 		//老师修改作业
 	      public String fabuzuoye(){

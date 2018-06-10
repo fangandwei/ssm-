@@ -1,4 +1,5 @@
 package action;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -125,12 +126,41 @@ public class StudentAction extends ActionSupport implements ModelDriven<Stu>{
 		        System.out.println(values[i]);  
 		   }
 		
-     
-		this.studentService.addstu(student,values);
-	
-		return SUCCESS;
+     //注册的时候需要判断数据库中是否有相同name的
+		   //把
+		   String stuname = request.getParameter("name");
+		   List<Stu> allstudent = this.studentService.findall();
+			for (Stu Evstudent : allstudent) {
+				if(Evstudent.getName().equals(stuname)){
+					ValueStack stack = ServletActionContext.getContext().getValueStack();
+		 			stack.set("error", "已经有人叫这个名字了");
+		 			return ERROR;
+           	
+           			
+           		
+           	}
+				}
+			 this.studentService.addstu(student,values);
+    			
+    			return SUCCESS;
+			 
+			}
+		   
+		/*   List<Stu> allstudent = this.studentService.findall();
+            Iterator<Stu> iterator = allstudent.iterator();
+            while(iterator.hasNext()){
+            	if(!(iterator.next().getName().equals(stuname))){
+            		 this.studentService.addstu(student,values);
+            			
+            			return SUCCESS;
+            		
+            	}
+            }
+            ValueStack stack = ServletActionContext.getContext().getValueStack();
+ 			stack.set("error", "已经有人叫这个名字了");
+ 			return ERROR;*/
+		  
 		
-	}
 	
 	//实现 作业的提交
 	public  String tijiao(){
