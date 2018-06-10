@@ -87,7 +87,8 @@ public class TeacherAction extends ActionSupport implements ModelDriven<Tea>{
 	    	       Tfindallhbyname();
 	    	       HttpServletRequest request = ServletActionContext.getRequest();
 	    	       String text = request.getParameter("textarea2");
-	    	       String hname = request.getParameter("textarea1");
+	    	       String hname1 = request.getParameter("textarea1");
+	    	       String hname=hname1.trim();
 	    	      String name  = (String) ServletActionContext.getContext().getSession().get("name");
 	    	  
 	    	  teacherService.fabuzuoye(text,hname,name);
