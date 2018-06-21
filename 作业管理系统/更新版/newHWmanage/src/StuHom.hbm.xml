@@ -11,22 +11,22 @@
             <generator class="native" />
         </id>
         <many-to-one name="homework" class="domain.Homework" fetch="select">
-            <column name="hid" >
+            <column name="hid">
                 <comment>外键 作业id</comment>
             </column>
         </many-to-one>
         <many-to-one name="stu" class="domain.Stu" fetch="select">
-            <column name="sid" >
+            <column name="sid">
                 <comment>外键 学生id</comment>
             </column>
         </many-to-one>
         <property name="state" type="java.lang.Integer">
-            <column name="state" >
+            <column name="state">
                 <comment>该作业的状态</comment>
             </column>
         </property>
         <property name="mytext" type="java.lang.String">
-            <column name="mytext" length="65535" >
+            <column name="mytext" length="65535">
                 <comment>该学生的作业</comment>
             </column>
         </property>

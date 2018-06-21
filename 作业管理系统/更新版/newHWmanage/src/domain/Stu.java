@@ -16,8 +16,6 @@ public class Stu implements java.io.Serializable {
 	private String name;
 	private String studentId;
 	private String classId;
-	private String course;
-	private Set homeworks = new HashSet(0);
 	private Set stuTeas = new HashSet(0);
 	private Set stuHoms = new HashSet(0);
 
@@ -28,24 +26,20 @@ public class Stu implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public Stu(String password, String name, String studentId, String classId,
-			String course) {
+	public Stu(String password, String name, String studentId, String classId) {
 		this.password = password;
 		this.name = name;
 		this.studentId = studentId;
 		this.classId = classId;
-		this.course = course;
 	}
 
 	/** full constructor */
 	public Stu(String password, String name, String studentId, String classId,
-			String course, Set homeworks, Set stuTeas, Set stuHoms) {
+			Set stuTeas, Set stuHoms) {
 		this.password = password;
 		this.name = name;
 		this.studentId = studentId;
 		this.classId = classId;
-		this.course = course;
-		this.homeworks = homeworks;
 		this.stuTeas = stuTeas;
 		this.stuHoms = stuHoms;
 	}
@@ -90,22 +84,6 @@ public class Stu implements java.io.Serializable {
 
 	public void setClassId(String classId) {
 		this.classId = classId;
-	}
-
-	public String getCourse() {
-		return this.course;
-	}
-
-	public void setCourse(String course) {
-		this.course = course;
-	}
-
-	public Set getHomeworks() {
-		return this.homeworks;
-	}
-
-	public void setHomeworks(Set homeworks) {
-		this.homeworks = homeworks;
 	}
 
 	public Set getStuTeas() {

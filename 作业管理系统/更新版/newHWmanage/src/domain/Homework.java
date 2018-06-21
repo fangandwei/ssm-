@@ -13,10 +13,8 @@ public class Homework implements java.io.Serializable {
 
 	private Integer id;
 	private Tea tea;
-	private Stu stu;
 	private String hname;
 	private String text;
-	private Integer state;
 	private Set stuHoms = new HashSet(0);
 
 	// Constructors
@@ -26,13 +24,10 @@ public class Homework implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Homework(Tea tea, Stu stu, String hname, String text, Integer state,
-			Set stuHoms) {
+	public Homework(Tea tea, String hname, String text, Set stuHoms) {
 		this.tea = tea;
-		this.stu = stu;
 		this.hname = hname;
 		this.text = text;
-		this.state = state;
 		this.stuHoms = stuHoms;
 	}
 
@@ -54,14 +49,6 @@ public class Homework implements java.io.Serializable {
 		this.tea = tea;
 	}
 
-	public Stu getStu() {
-		return this.stu;
-	}
-
-	public void setStu(Stu stu) {
-		this.stu = stu;
-	}
-
 	public String getHname() {
 		return this.hname;
 	}
@@ -76,14 +63,6 @@ public class Homework implements java.io.Serializable {
 
 	public void setText(String text) {
 		this.text = text;
-	}
-
-	public Integer getState() {
-		return this.state;
-	}
-
-	public void setState(Integer state) {
-		this.state = state;
 	}
 
 	public Set getStuHoms() {

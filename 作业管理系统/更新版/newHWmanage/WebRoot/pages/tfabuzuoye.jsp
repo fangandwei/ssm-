@@ -18,7 +18,7 @@
 		Class.forName("com.mysql.jdbc.Driver");
 		String url = "jdbc:mysql:///test";
 		String user = "root";
-		String password = "123456";
+		String password = "1234";
 		Connection c = DriverManager.getConnection(url, user, password);
 		PreparedStatement pre = c.prepareStatement("select * from tea");
 	    PreparedStatement pre2 = c.prepareStatement("select * from stu");

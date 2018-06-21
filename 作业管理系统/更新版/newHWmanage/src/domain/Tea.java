@@ -23,12 +23,6 @@ public class Tea implements java.io.Serializable {
 	public Tea() {
 	}
 
-	/** minimal constructor */
-	public Tea(String name, String password) {
-		this.name = name;
-		this.password = password;
-	}
-
 	/** full constructor */
 	public Tea(String name, String password, Set stuTeas, Set homeworks) {
 		this.name = name;

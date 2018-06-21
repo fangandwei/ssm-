@@ -16,7 +16,7 @@ xmlns="http://www.springframework.org/schema/beans">
 <property name="jdbcUrl" value="jdbc:mysql:///test"></property>
 <property name="driverClass" value="com.mysql.jdbc.Driver"></property>
 <property name="user" value="root"></property>
-<property name="password" value="123456"></property>
+<property name="password" value="1234"></property>
 </bean>
 <!-- 配置工厂 造会话 Session-->
 <bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
